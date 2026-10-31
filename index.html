@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d1211">
+  <meta name="description" content="Optimasi foto & video agar tetap jernih saat diunggah ke Status WhatsApp. 100% diproses di perangkat.">
+  <title>WA HD – Status Quality</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="WA HD">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="app-header">
+    <div class="header-inner">
+    <div class="brand">
+      <img src="icons/icon-192.png" alt="Logo WA HD" class="brand-logo">
+      <div class="brand-text">
+        <h1>WA HD</h1>
+        <p>Status Quality</p>
+      </div>
+    </div>
+    <button id="installBtn" class="btn btn-sec btn-small" hidden>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+      Install
+    </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HOME ============ -->
+    <section id="screenHome" class="screen">
+      <div class="home-grid">
+      <div class="hero">
+        <h2>Tetap jernih<br>di <span class="hl">Status WhatsApp.</span></h2>
+        <p>Optimalkan kualitas foto &amp; video untuk Status WhatsApp. Seluruh proses berjalan langsung di perangkat Anda — tanpa server, tanpa unggahan.</p>
+        <div class="hero-meta"><span>Pemrosesan lokal</span><span>Privasi terjaga</span><span>Gratis tanpa iklan</span></div>
+      </div>
+
+      <div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Pilih foto atau video">
+        <span class="dz-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 17V3"/><path d="m6 9 6-6 6 6"/><path d="M21 17v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2"/></svg>
+        </span>
+        <p class="dz-main">Letakkan foto atau video di sini</p>
+        <p class="dz-sub">atau klik untuk memilih berkas</p>
+      </div>
+
+      <div class="btn-row">
+        <button id="btnPickPhoto" class="btn btn-sec">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+          Pilih Foto
+        </button>
+        <button id="btnPickVideo" class="btn btn-sec">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+          Pilih Video
+        </button>
+        <button id="btnCamera" class="btn btn-sec">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"/><circle cx="12" cy="13" r="3"/></svg>
+          Kamera
+        </button>
+      </div>
+
+      <div class="home-feat">
+      <p class="section-title">Fitur</p>
+      <div class="card feature-card">
+        <div class="feature-row">
+          <span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg></span>
+          <div><h4>Foto HD</h4><p>Kualitas foto dijaga tetap tajam &amp; tidak pecah.</p></div>
+        </div>
+        <div class="feature-row">
+          <span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></span>
+          <div><h4>Video HD</h4><p>Resolusi &amp; bitrate video dioptimalkan untuk Status.</p></div>
+        </div>
+        <div class="feature-row">
+          <span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/></svg></span>
+          <div><h4>Format WhatsApp</h4><p>Sesuaikan media ke rasio 9:16 khas Status WA.</p></div>
+        </div>
+        <div class="feature-row">
+          <span class="f-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2z"/></svg></span>
+          <div><h4>Anti Blur</h4><p>Ketajaman otomatis melawan kompresi WhatsApp.</p></div>
+        </div>
+        <div class="feature-row">
+          <span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <div><h4>Preview</h4><p>Bandingkan sebelum &amp; sesudah sebelum disimpan.</p></div>
+        </div>
+        <div class="feature-row">
+          <span class="f-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="3" x2="12" y2="15"/></svg></span>
+          <div><h4>Simpan</h4><p>Simpan hasilnya langsung ke perangkat.</p></div>
+        </div>
+      </div>
+      </div>
+
+      <div class="tips home-tips">
+        <p class="section-title">Tahukah Anda?</p>
+        <div class="card tips-card">
+          <p>WhatsApp memampatkan Status hingga sekitar 720p. Kuncinya: unggah dalam format <b>1080×1920 (9:16)</b> dengan kualitas JPEG tinggi plus sedikit penajaman, sehingga setelah kompresi WhatsApp foto Anda tetap terlihat jernih.</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- ============ EDITOR ============ -->
+    <section id="screenEditor" class="screen" hidden>
+      <div class="editor-top">
+        <button id="btnBack" class="btn-icon" aria-label="Kembali">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+        </button>
+        <div class="file-meta">
+          <span id="kindChip" class="chip">Foto HD</span>
+          <span id="fileName" class="file-name">file.jpg</span>
+        </div>
+      </div>
+
+      <div class="editor-grid">
+
+      <!-- Preview -->
+      <div class="preview">
+        <div id="photoPreview">
+          <img id="photoBefore" class="preview-img" alt="Pratinjau asli">
+          <div id="ba" class="ba" hidden>
+            <img id="baBefore" class="ba-img" alt="Sebelum">
+            <img id="baAfter" class="ba-img ba-top" alt="Sesudah">
+            <span class="ba-tag left">ASLI</span><span class="ba-tag right">HASIL</span>
+            <div id="baHandle" class="ba-handle"></div>
+            <input id="baRange" type="range" min="0" max="100" value="50" aria-label="Geser untuk membandingkan sebelum dan sesudah">
+          </div>
+        </div>
+        <div id="videoPreview" hidden>
+          <video id="vidBefore" class="preview-video" controls playsinline muted></video>
+          <video id="vidAfter" class="preview-video" controls playsinline muted hidden></video>
+          <div id="vidToggle" class="seg seg-small" hidden>
+            <button class="seg-btn" data-vp="before">Asli</button>
+            <button class="seg-btn" data-vp="after">Hasil</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Options -->
+      <div class="options card">
+        <div class="opt">
+          <label>Format Status</label>
+          <div id="optFormat" class="seg">
+            <button class="seg-btn active" data-format="full">9:16 Penuh</button>
+            <button class="seg-btn" data-format="blur">9:16 + Blur</button>
+            <button class="seg-btn" data-format="original">Asli</button>
+          </div>
+          <p id="formatHint" class="hint"></p>
+        </div>
+
+        <div id="optPhoto">
+          <div class="opt">
+            <label>Ketajaman <b id="sVal">35%</b></label>
+            <input id="sRange" type="range" min="0" max="100" value="35">
+            <p class="hint">Mengimbangi blur akibat kompresi WhatsApp.</p>
+          </div>
+          <div class="opt">
+            <label>Kualitas JPEG <b id="qVal">92%</b></label>
+            <input id="qRange" type="range" min="70" max="100" value="92">
+            <p class="hint">Makin tinggi = makin jernih, ukuran file makin besar.</p>
+          </div>
+        </div>
+
+        <div id="optVideo" hidden>
+          <div class="opt">
+            <label>Kualitas Video</label>
+            <div id="optBitrate" class="seg">
+              <button class="seg-btn" data-br="4">Hemat<br><small>4 Mbps</small></button>
+              <button class="seg-btn active" data-br="8">Seimbang<br><small>8 Mbps</small></button>
+              <button class="seg-btn" data-br="12">Maksimal<br><small>12 Mbps</small></button>
+            </div>
+            <p class="hint">Bitrate tinggi = lebih jernih, file lebih besar.</p>
+          </div>
+        </div>
+
+        <p id="mediaInfo" class="hint"></p>
+        <button id="btnProcess" class="btn btn-primary btn-big">
+          <span class="spinner" aria-hidden="true"></span>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.4 7.6L22 12l-7.6 2.4L12 22l-2.4-7.6L2 12l7.6-2.4L12 2z"/></svg>
+          <span id="btnProcessLabel">Optimasi Sekarang</span>
+        </button>
+        <button id="btnCancel" class="btn btn-ghost" hidden>Batalkan</button>
+        <div id="progressWrap" hidden>
+          <div class="progress"><div id="progressBar"></div></div>
+          <p id="progressText" class="hint">0%</p>
+        </div>
+      </div>
+
+      <!-- Result -->
+      <div id="resultPanel" class="result" hidden>
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Siap disimpan
+        </h3>
+        <div class="stats">
+          <div class="stat"><span id="statSize"></span><small>Ukuran</small></div>
+          <div class="stat"><span id="statRes"></span><small>Resolusi</small></div>
+          <div class="stat" id="statDurWrap"><span id="statDur"></span><small>Durasi</small></div>
+        </div>
+        <div class="btn-col">
+          <button id="btnSave" class="btn btn-primary btn-big">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Simpan ke Perangkat
+          </button>
+          <button id="btnRedo" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            Atur Ulang
+          </button>
+        </div>
+        <p class="hint center">File disimpan ke penyimpanan perangkat, siap diunggah ke Status WhatsApp.</p>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">WA HD – Status Quality · v1.1 · <span id="year"></span> · Diproses 100% di perangkat Anda</footer>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <input id="inputAny" type="file" accept="image/*,video/*" hidden>
+  <input id="inputPhoto" type="file" accept="image/*" hidden>
+  <input id="inputVideo" type="file" accept="video/*" hidden>
+  <input id="inputCamera" type="file" accept="image/*,video/*" capture="environment" hidden>
+  <canvas id="canvas" hidden></canvas>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
